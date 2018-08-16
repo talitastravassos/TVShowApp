@@ -1,0 +1,35 @@
+<!--
+  Generated template for the SerieDetalhesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card *ngIf="tvshow">
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + tvshow.poster_path">
+          </ion-avatar>
+          <h2>{{ tvshow.original_name }}</h2>
+          <p>{{ tvshow.first_air_date }}</p>
+        </ion-item>
+    
+        <img [src]="'https://image.tmdb.org/t/p/w500/' + tvshow.backdrop_path">
+    
+        <ion-card-content>
+          <p>{{ tvshow.overview }}</p>
+        </ion-card-content>
+    
+      </ion-card>
+
+</ion-content>
